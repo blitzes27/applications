@@ -1,0 +1,2 @@
+# applications
+Linux / Mac / Windows
