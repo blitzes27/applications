@@ -12,6 +12,7 @@ It opens a specified folder and shows all the picters in that folder on your hos
 
 ![alt text](picture1.png)
 ![alt text](picture2.png)
+![alt text](picture3.png)
 
 **When started it:**
 * Opens finder and asks you to select a folder
