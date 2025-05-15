@@ -13,8 +13,26 @@ It opens a specified folder and shows all the picters in that folder on your hos
 
 # For those who want to build it
 
+There are some tools you need in order to build the app.
+If you need prerequisite then you are probably not the right person to travel this road.
+
+## Prerequisites
 ```bash
-# Download folder
+# prerequisite installation.
+xcode-select --install
+# install brew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+# add Homebrew to PATH (SILICON  NOT INTEL)
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"
+# Install git
+brew install git
+```
+
+## Command to build the app.
+
+```bash
+# Download folder & build the app
 git clone --depth=1 --filter=blob:none --sparse git@github.com:blitzes27/applications.git && \
 cd applications && \
 git sparse-checkout set macos/picture_website && \
@@ -28,3 +46,4 @@ cp -R dist/ImageViewer.app "$HOME/Desktop/ImageViewer.app"
 ```
 The app can be found on Desktop or in 
 * macos/picture_website/dist/ImageViewer.app
+
