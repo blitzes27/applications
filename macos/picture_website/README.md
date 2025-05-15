@@ -10,9 +10,9 @@ You can build or download a prebuilt app. The Application is called ImageViewer 
 
 It opens a specified folder and shows all the picters in that folder on your host ip with a random port. It will open your standard browser and go to the webbsite. Anyone on the network with a phone or computer can go to that link and see the pictures
 
-![alt text](picture1.png)
-![alt text](picture2.png)
-![alt text](picture3.png)
+![alt text](pictures/picture1.png)
+![alt text](pictures/picture2.png)
+![alt text](pictures/picture3.png)
 
 **When started it:**
 * Opens finder and asks you to select a folder
