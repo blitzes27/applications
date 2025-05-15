@@ -1,0 +1,31 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drunken Pictures</title>
+    <link href="{{ url_for('static', filename='index.css') }}" rel="stylesheet" />
+
+    <!-- <link href="../static/index.css" rel="stylesheet" />  link to the css file that contains the styling for the page --> 
+</head>
+
+<body>
+    <h1>Meron Tedros is your GOD</h1>
+
+    <a href="{{ url_for('result') }}"> <!-- link to the result route -->
+        <button id="result" type="button"> Found old deleted pictures on your PC - CLICK HERE</button> <!-- button that will redirect to the result route -->
+    </a>
+
+    <!-- <img src="../../docs/mango-owl.jpeg" alt="Team Picture" id="mango-owl"> -->
+    <img src="{{ url_for('static', filename='mango-owl.jpeg') }}" alt="Team Picture" id="mango-owl"> <!-- link to the image of the team -->
+        <div id="clock"></div> <!-- division (container) that will be updated with the current time -->
+    </form>
+
+    <script>
+        function updateClock() {
+            const clock = document.getElementById('clock');     // Get element id 'clock'
+            const now = new Date(); // creates new date object, which is the current time
+            clock.innerHTML = now.toLocaleTimeString(); // Set the innerHTML of the clock element to the current time
+        }
+        setInterval(updateClock, 1000); // update the clock every second
+        updateClock(); // update the clock immediately when the page is loaded
+    </script>
+</body>

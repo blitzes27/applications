@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 2rem; /* Adds some space around the body */
+    background-color: #cc8800;; /* Background color */
+    color: whitesmoke; /* Text color */
+    min-height: 100vh; /* Set the height of the body to the height of the viewport */
+    display: flex; /* Stack elements horizontally */
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center; /* Center elements vertically */
+    align-items: center; /* Center elements horizontally */
+    gap: 2rem; /* Adds some space between elements */
+    font-size: 2rem; /* Text size */
+}
+
+/* Team Mango-Owl logga som länk till index.html */
+#index1 {
+    font-size: 2rem; /* Text size */
+    padding: 1rem; /* Adds some space inside the element */
+    border-radius: 20px; /* Rounded corners */
+    background-color: #666633; /* Background color */
+    color: #0000ff; /* Text color */
+    position: absolute; /* Position the title */
+    top: 0; /* Place the title to the top */
+    left: 0; /* Place the title to the left */
+    margin: 1rem; /* Adds some space around the element */
+}
+
+#clock {
+    font-size: 2.35rem; /* Text size */
+    font-weight: bold; /* Bold text */
+    background-color: #666633; /* Background color */
+    color: whitesmoke; /* Text color */
+    padding: 1rem; /* Adds some space inside the element */
+    text-align: center; /* Center the text */
+    position: absolute; /* Position the clock */
+    top: 0; /* Place the clock to the top */
+    right: 0; /* Place the clock to the right */
+    margin: 1rem; /* Adds some space around the element */
+    border-radius: 20%; /* Make the corners round */
+    display: flex; /* Stack elements horizontally */
+    justify-content: center; /* Center the text horizontally */
+    align-items: center; /* Center the text vertically */
+}
+
+#mango-owl {
+    width: 160px; /* Set the size of the image */
+    height: 160px; /* Set the size of the image */
+    border-radius: 50%; /* Make the image round */
+    object-fit: cover;  /* Scale the image */
+    position: absolute; /* Position the image */
+    top: 7rem;  /* Move the image down */
+    left: 5rem; /* Move the image to the left */
+}
+
+/* Galleri-layout */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* Each “thumbnail” container gets 30% of the gallery's width */
+.thumb {
+  width: 30%;
+  text-align: center;
+}
+
+/* The image fills the entire container */
+.thumb img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Drunken Pictures</title>
+  <link href="{{ url_for('static', filename='result.css') }}" rel="stylesheet" />
+</head>
+<body>
+  <a href="{{ url_for('index') }}">
+    <button id="index1" type="button">← Back</button>
+  </a>
+
+
+  <h2>Drunken Pictures - wait for a moment your computer is ROFL by seeing the pictures</h2>
+    <div class="gallery">
+    {% for img in images %}
+        <div class="thumb">
+        <a 
+        href="data:image/{{ img.ext }};base64,{{ img.data }}" 
+        target="_blank" 
+        rel="noopener"
+        >
+        <img
+            src="data:image/{{ img.ext }};base64,{{ img.data }}"
+            alt="{{ img.name }}"
+            loading="lazy"
+        />
+        </a>
+        <p>{{ img.name }}</p>
+        </div>
+    {% endfor %}
+    </div>
+
+  <div id="clock"></div>
+  <script>
+    function updateClock() {
+      const clock = document.getElementById('clock');
+      clock.innerHTML = new Date().toLocaleTimeString();
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+  </script>
+</body>
+</html>
