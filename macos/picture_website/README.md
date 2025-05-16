@@ -30,13 +30,19 @@ If you need prerequisite then you are probably not the right person to travel th
 ```bash
 # prerequisite installation.
 xcode-select --install
-# install brew
+# install Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 # add Homebrew to PATH (SILICON  NOT INTEL)
 echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"
+# Update brew
+brew update
 # Install git
 brew install git
+# Install Python 3 (includes pip3, ensurepip, setuptools, wheel)
+brew install python
+# Upgrade pip, setuptools, wheel
+python3 -m pip install --upgrade pip setuptools wheel
 ```
 
 ## Command to build the app.
