@@ -18,7 +18,7 @@ It opens a specified folder and shows all the picters in that folder on your hos
 * Opens finder and asks you to select a folder
 * When a folder is selected it will open standard browser and display all the pictures in the folder.
 * When a picture is clicked on it will open a new tab with the picture making it possible to get the full resulotion.
-* **The app currently need to be forced quit**
+* ### The app currently need to be forced quit
 
 
 # For those who want to build it
