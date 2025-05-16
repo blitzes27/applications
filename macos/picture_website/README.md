@@ -56,11 +56,16 @@ git sparse-checkout init --cone
 git sparse-checkout set macos/picture_website
 git checkout
 cd macos/picture_website
+# Create the virtual envoirment
 python3 -m venv venv
+# Activate the virtual envoirment
 source venv/bin/activate
+# Upgrade and install requirements
 python3 -m pip install --upgrade pip
 python3 -m pip install -r requirements.txt
+# build the app
 python3 setup.py py2app
+# copy it to the desktop
 cp -R dist/ImageViewer.app "$HOME/Desktop/ImageViewer.app"
 ```
 The app can be found on Desktop or in 
