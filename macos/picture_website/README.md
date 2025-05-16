@@ -52,7 +52,7 @@ python3 -m pip install --upgrade pip setuptools wheel
 git clone --depth=1 --filter=blob:none --no-checkout git@github.com:blitzes27/applications.git
 cd applications
 git sparse-checkout init --cone
-# only choose macos/picture_website
+# Will only download macos/picture_website
 git sparse-checkout set macos/picture_website
 git checkout
 cd macos/picture_website
