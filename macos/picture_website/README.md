@@ -71,5 +71,5 @@ cp -R dist/ImageViewer.app "$HOME/Desktop/ImageViewer.app"
 The app can be found on Desktop or in 
 * macos/picture_website/dist/ImageViewer.app
 
-* The app currently needs to be Force quit
+### The app currently needs to be Force quit
 
