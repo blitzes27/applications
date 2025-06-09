@@ -14,8 +14,6 @@ OPTIONS = {
     ],
     # Bundle your templates and static folders inside the .app
     "resources": ["templates", "static"],
-    # Enable macOS argv emulation so dragging a folder onto the icon passes it in sys.argv
-    "argv_emulation": True,
     "plist": {
         "CFBundleName": "ImageViewer",
         "CFBundleIdentifier": "com.yourdomain.imageviewer",

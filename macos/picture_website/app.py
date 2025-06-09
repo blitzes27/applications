@@ -50,7 +50,7 @@ def result():
 
     images = []
     for fname in sorted(os.listdir(IMAGE_FOLDER)):
-        if fname.lower().endswith((".png","jpg","jpeg","gif","bmp","webp")):
+        if fname.lower().endswith((".png",".jpg",".jpeg",".gif",".bmp",".webp")):
             path = os.path.join(IMAGE_FOLDER, fname)
             with open(path, "rb") as f:
                 data = base64.b64encode(f.read()).decode("utf-8")
@@ -62,6 +62,9 @@ def result():
     return render_template("result.html", images=images)
 
 if __name__ == "__main__":
+    
+    global IMAGE_FOLDER
+    
     if len(sys.argv) > 1:
         IMAGE_FOLDER = sys.argv[1]
     else:
