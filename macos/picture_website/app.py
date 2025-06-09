@@ -12,6 +12,19 @@ app = Flask(
     template_folder="templates"
 )
 
+def get_local_ip():
+    """Get the local IP address using ifconfig."""
+    # Run the shell command to get IP address
+    cmd = "ifconfig | awk '/inet / && $2 != \"127.0.0.1\" { print $2; exit }'"
+    result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
+    
+    if result.returncode == 0 and result.stdout.strip():
+        return result.stdout.strip()
+    else:
+        # Fallback to localhost if command fails
+        return "127.0.0.1"
+
+
 def select_folder():
     """Use osascript to pop up the native macOS folder chooser."""
     script = 'POSIX path of (choose folder with prompt "Choose a folder with images")'
@@ -53,12 +66,15 @@ if __name__ == "__main__":
         IMAGE_FOLDER = sys.argv[1]
     else:
         IMAGE_FOLDER = select_folder()
-
+        
+    # Get the local IP address
+    local_ip = get_local_ip()
+    
     # pick free port
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     sock.bind(("", 0))
     port = sock.getsockname()[1]
     sock.close()
-
-    webbrowser.open(f"http://127.0.0.1:{port}")
+    
+    webbrowser.open(f"http://{local_ip}:{port}")
     app.run(host="0.0.0.0", port=port, use_reloader=False)
