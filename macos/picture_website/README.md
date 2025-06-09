@@ -49,12 +49,10 @@ python3 -m pip install --upgrade pip setuptools wheel
 
 ```bash
 # Download folder & build the app
-git clone --depth=1 --filter=blob:none --no-checkout git@github.com:blitzes27/applications.git
+git clone --depth=1 --filter=blob:none --sparse https://github.com/blitzes27/applications.git
 cd applications
-git sparse-checkout init --cone
-# Will only download macos/picture_website
+# only picture website folder
 git sparse-checkout set macos/picture_website
-git checkout
 cd macos/picture_website
 # Create the virtual envoirment
 python3 -m venv venv
