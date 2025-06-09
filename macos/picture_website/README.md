@@ -2,7 +2,7 @@
 
 **Download a prebuilt app here:**
 
-https://github.com/blitzes27/applications/releases/download/v0.1.0/ImageViewer.zip
+https://github.com/blitzes27/applications/releases/download/v0.2.0/ImageViewer.zip
 
 You can build or download a prebuilt app. The Application is called ImageViewer and is built on pyflask.
 
